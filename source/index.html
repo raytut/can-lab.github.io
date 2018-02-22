@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}Cognitive Affective Neuroscience lab{% endblock %}
+{% block content %}
+<!-- Banner -->
+<section id="banner">
+<div class="content">
+    <header>
+    <h1>Welcome</h1>
+    <p>On these pages you can find information on the research performed in the <strong>Cognitive Affective Neuroscience lab</strong> headed by <strong><a href="erno_hermans.html">Erno Hermans</a></strong></p>
+    </header>
+    <p>The main research question that we address in our work is how our brain enables us to survive and learn to keep away from situations that threaten our physical or psychological well-being. Traditionally, this topic has been addressed in relative isolation at different levels of analysis, ranging from molecular and cellular to behavioral and clinical neurosciences. We attempt to bridge these fields through a systems-level analysis in humans in which we combine functional neuroimaging with endocrine measures, autonomic psychophysiology, pharmacological manipulations, genetics, and rigorous experimental behavioral paradigms. The ultimate goal of this effort is to advance understanding, treatment, and prevention of stress-related psychopathology.</p>
+    <ul class="actions">
+        <li><a href="research.html" class="button big">Learn More</a></li>
+    </ul>
+</div>
+<span class="image object">
+    <a href="research.html"><img src="images/group.jpg" alt="" /></a>
+</span>
+</section>
+
+<!-- Section -->
+<section>
+<header class="major">
+<h2>Lab members</h2>
+</header>
+<div class="features">
+{% for member in members %}
+    <article>
+    <span class="icon image profile-image">
+        <a href="{{ member.url }}"><img src="{{ member.image }}" alt="" /></a>
+    </span>
+    <div class="content">
+        <h3><a href="{{ member.url }}">{{ member.name }}</a></h3>
+        <p>{{ member.function }}</p>
+    </div>
+    </article>
+{% endfor %} 
+</div>
+</section>
+
+<!-- Section -->
+<section>
+<header class="major">
+<h2>See also</h2>
+</header>
+<div class="posts">
+    <article>
+    <a href="publications.html" class="image"><img src="images/publications.jpg" alt="" /></a>
+    <h3>Publications</h3>
+    <p>Work published by members of the lab</p>
+    <ul class="actions">
+        <li><a href="publications.html" class="button">More</a></li>
+    </ul>
+    </article>
+    <article>
+    <a href="media.html" class="image"><img src="images/media.jpg" alt="" /></a>
+    <h3>Media</h3>
+    <p>Some media highlights covering our work</p>
+    <ul class="actions">
+        <li><a href="media.html" class="button">More</a></li>
+    </ul>
+    </article>
+</div>
+{% endblock %}
